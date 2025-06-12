@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nova Elevator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Logo">
+      <h1>Nova Elevator</h1>
+    </div>
+    <nav>
+      <button onclick="openForm()">Inquiry</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="info">
+      <h2>Welcome to Nova Elevator</h2>
+      <p>Providing modern, safe, and efficient elevators for homes and businesses.</p>
+    </section>
+
+      <section id="elevator-types">
+      <h2>Our Elevator Types</h2>
+      <div class="elevator-gallery">
+        <div class="elevator-item">
+          <img src="images/service.jpg" alt="Service Elevator">
+          <h3>Service Elevator</h3>
+          <p>These are designed to transport goods and materials, often in commercial or industrial settings. </p>
+        </div>
+        <div class="elevator-item">
+          <img src="images/passenger.jpg"alt="Passenger Elevator">
+          <h3>Passenger Elevator</h3>
+          <p>Efficient and smooth travel for residential and commercial buildings.</p>
+        </div>
+        <div class="elevator-item">
+          <img src="images/freight.jpg" alt="Freight Elevator">
+          <h3>Freight Elevator</h3>
+          <p>Designed to move heavy goods in factories and warehouses.</p>
+        </div>
+        <div class="elevator-item">
+          <img src="images/home.avif" alt="Home Elevator">
+          <h3>Home Elevator</h3>
+          <p>Ideal for villas and duplexes with stylish and space-saving design.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  <p><strong>Contact:</strong> +91-8356072676/9594979283 | <strong>Email:</strong> ashokt83@gmail.com</p>
+  <p><strong>Address:</strong> Station plaza 1st floor bhandup complex Bhandup mumbai 400078</p>
+</footer>
+
+
+  <!-- Inquiry Form -->
+  <div id="inquiryModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeForm()" class="close">&times;</span>
+      <h3>Inquiry Form</h3>
+      <form id="inquiryForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* General Reset and Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+nav button {
+  background-color: #00aaff;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #0077cc;
+}
+
+/* Welcome Info Section */
+#info {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #e6f2ff;
+}
+
+#info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Elevator Types Section */
+#elevator-types {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+#elevator-types h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #003366;
+}
+
+.elevator-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap; /* all images in one line */
+  gap: 20px;
+  overflow-x: auto; /* horizontal scroll on smaller screens */
+  padding-bottom: 20px;
+}
+
+.elevator-item {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex: 0 0 23%; /* Show 4 in one line */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.elevator-item:hover {
+  transform: scale(1.05);
+}
+
+.elevator-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.elevator-item h3 {
+  margin: 10px 0 5px;
+  color: #003366;
+}
+
+.elevator-item p {
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Inquiry Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: #003366;
+}
+
+#inquiryForm input,
+#inquiryForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#inquiryForm button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#inquiryForm button:hover {
+  background-color: #0055aa;
+}
+
+/* Responsive - Optional */
+@media (max-width: 768px) {
+  .elevator-gallery {
+    flex-wrap: wrap; /* wrap on smaller screens */
+    justify-content: center;
+  }
+
+  .elevator-item {
+    flex: 0 0 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .elevator-item {
+    flex: 0 0 90%;
+  }
+}
